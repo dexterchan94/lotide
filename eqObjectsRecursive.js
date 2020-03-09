@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`"✅ Assertion Passed: ${actual} === ${expected}"`);
-  } else {
-    console.log(`"❌ Assertion Failed: ${actual} !== ${expected}"`);
-  }
-};
+const assertEqual = require("./assertEqual");
 
 
 const isObject = function(element) {
@@ -33,9 +27,11 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
 
-// Test cases
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2}), true);
-assertEqual(eqObjects({ a: { z: { m: 3 } }, b: 3 }, { a: { z: { m: 3 } }, b: 2, c: 3}), false);
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2}), false);
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
+
+// // Test cases
+// assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2}), true);
+// assertEqual(eqObjects({ a: { z: { m: 3 } }, b: 3 }, { a: { z: { m: 3 } }, b: 2, c: 3}), false);
+// assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2}), false);
+// assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
