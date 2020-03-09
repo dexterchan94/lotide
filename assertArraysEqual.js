@@ -1,4 +1,4 @@
-const eqArrays = require("./eqArrays");
+const eqArrays = require("./eqArraysRecursive");
 
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {

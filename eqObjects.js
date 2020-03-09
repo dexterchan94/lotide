@@ -1,6 +1,6 @@
 const assertEqual = require("./assertEqual");
 
-const eqArrays = require("./eqArrays");
+const eqArrays = require("./eqArraysRecursive");
 
 const eqObjects = function(object1, object2) {
   for (key in object1) {
