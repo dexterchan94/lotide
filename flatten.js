@@ -1,6 +1,3 @@
-const eqArrays = require("./eqArraysRecursive");
-const assertArraysEqual = require("./assertArraysEqual");
-
 const flatten = function(arr) {
   let flattenedArray = [];
 
@@ -18,7 +15,3 @@ const flatten = function(arr) {
 };
 
 module.exports = flatten;
-
-// // Test cases
-// assertArraysEqual(flatten([1, [2, 3], [4, 5, 6, 7], 8]), [1, 2, 3, 4, 5, 6, 7, 8]);
-// assertArraysEqual(flatten(["potato", [2, 3], [4, 5, 6, 7], 8]), ["potato", 2, 3, 4, 5, 6, 7, 8]);
