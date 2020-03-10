@@ -1,6 +1,3 @@
-const eqArrays = require("./eqArraysRecursive");
-const assertArraysEqual = require("./assertArraysEqual");
-
 const letterPositions = function(sentence) {
   let results = {};
 
@@ -19,6 +16,4 @@ const letterPositions = function(sentence) {
 
 module.exports = letterPositions;
 
-// // Test cases
-// assertArraysEqual(letterPositions("hello there").h, [0, 7]);
-// assertArraysEqual(letterPositions("general kenobi").e, [1, 3, 9]);
+
